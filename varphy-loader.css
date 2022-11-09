@@ -28,21 +28,76 @@ body {
 	margin: auto;
 }
 .loader {
-  width: 100%;
-  height: 720px;
-}
-.loader h1 {
-	padding-top: 200px;
-	font-size: 4rem;
-	text-align: center;
-	font-weight: 100;
+	width: 100%;
+	height: 720px;
 }
 .loader p {
 	text-align: center;
-	font-size: 3rem;
-  animation: beat 1s alternate infinite;
-  padding-top: 30px;
 }
+.loader p.text-1 {
+	font-size: 4rem;
+	padding-top: 200px;
+	font-weight: 100;
+}
+.loader p.text-2 {
+	font-size: 3rem;
+}
+.loader p.timer {
+	text-align: center;
+	font-size: 3rem;
+	animation: beat 1s alternate infinite;
+	padding-top: 30px;
+}
+
+.help-container {
+	opacity: .6;
+	position: absolute;
+	top: 1em;
+	right: 1em;
+	display: flex;
+	flex-direction: column;
+	align-items: end;
+}
+.help-container:hover {
+	opacity: 1;
+}
+.help-container .help {
+	border-radius: 50%;
+	height: 35px;
+	width: 35px;
+	border: solid 1px white;
+	background: black;
+}
+.help-container .help:hover {
+	background: white;
+	border-color: black;
+	cursor: help;
+}
+.help-container .help .circle {
+	padding-top: 3px;
+	width: 100%;
+	height: 100%;
+}
+.help-container .help p {
+	color: white;
+	font-size: 24px;
+	text-align: center;
+}
+.help-container .help:hover p {
+	color: black;
+}
+.help-container:hover::after {
+	content: attr(data-hover);
+	color: white;
+	font-family: 'Raleway Thin', sans-serif;
+	padding: 5px;
+	position: absolute;
+	text-align: right;
+	left: -420px;
+	top: 3px;
+	width: 400px;
+}
+
 @keyframes beat {
 	from { opacity: 0.6; }
 	to { opacity: 1; }

@@ -1,4 +1,4 @@
-var Varphyloader = {}; // Particle systems and drawing
+let Varphyloader = {}
 
 Varphyloader.boot = function() {
 	this.setup();
@@ -34,7 +34,7 @@ Varphyloader.update = function() {
 	var diff = this.nextTime - now;
 	this.diff = diff;
 	if (this.diff < 0) {
-		$('span.timer').html('00:00:00');
+		$('p.timer').html('00:00:00');
 		return false;
 	}
 	var seconds = Math.floor(diff / 1000) % 60;
@@ -49,7 +49,7 @@ Varphyloader.update = function() {
 	if (mins < 10) mins = '0' + mins;
 	if (hours < 10) hours = '0' + hours;
 	
-	$('span.timer').html(hours + ':' + mins + ':' + seconds);
+	$('.timer').html(hours + ':' + mins + ':' + seconds);
 };
 
 jQuery(document).ready(function() {
