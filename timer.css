@@ -38,9 +38,11 @@ body {
 	font-size: 4rem;
 	padding-top: 200px;
 	font-weight: 100;
+	cursor: pointer;
 }
 .loader p.text-2 {
 	font-size: 3rem;
+	cursor: pointer;
 }
 .loader p.timer {
 	text-align: center;
